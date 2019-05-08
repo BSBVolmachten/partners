@@ -1,0 +1,17 @@
+plugin:
+    name: 'bsbvolmachten.partners::lang.plugin.name'
+    description: 'bsbvolmachten.partners::lang.plugin.description'
+    author: 'BSB Volmachten'
+    icon: oc-icon-male
+    homepage: ''
+permissions:
+    manage=partners:
+        tab: 'Partners Beheren'
+        label: 'Partners Beheren'
+navigation:
+    main-menu-item:
+        label: Partners
+        url: bsbvolmachten/partners/partners
+        icon: icon-male
+        permissions:
+            - manage=partners

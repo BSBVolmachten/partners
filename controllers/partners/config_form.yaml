@@ -1,0 +1,17 @@
+name: Partners
+modelClass: BsbVolmachten\Partners\Models\Partners
+form: $/bsbvolmachten/partners/models/partners/fields.yaml
+defaultRedirect: bsbvolmachten/partners/partners
+create:
+    title: 'Partner Aanmaken'
+    redirect: 'bsbvolmachten/partners/partners/update/:id'
+    redirectClose: bsbvolmachten/partners/partners
+    flashSave: 'Partner Opgeslagen'
+update:
+    title: 'Partner Bewerken'
+    redirect: bsbvolmachten/partners/partners
+    redirectClose: bsbvolmachten/partners/partners
+    flashSave: 'Partner Opgeslagen'
+    flashDelete: 'Partner Verwijderd'
+preview:
+    title: 'Partner Weergeven'

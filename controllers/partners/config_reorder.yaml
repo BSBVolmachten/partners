@@ -1,0 +1,5 @@
+title: Partners
+modelClass: BsbVolmachten\Partners\Models\Partners
+nameFrom: name
+toolbar:
+    buttons: reorder_toolbar

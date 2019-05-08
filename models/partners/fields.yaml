@@ -1,0 +1,20 @@
+fields:
+    name:
+        label: 'Naam Bedrijf'
+        span: left
+        required: 1
+        type: text
+    url:
+        label: 'Link naar website'
+        span: left
+        type: text
+    image:
+        label: Logo
+        mode: image
+        useCaption: 0
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        required: 1
+        type: fileupload
