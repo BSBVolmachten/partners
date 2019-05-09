@@ -1,4 +1,4 @@
-<?php namespace BsbVolmachten\Partners;
+<?php namespace Bsbvolmachten\Partners;
 
 use System\Classes\PluginBase;
 
