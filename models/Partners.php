@@ -1,4 +1,4 @@
-<?php namespace BsbVolmachten\Partners\Models;
+<?php namespace Bsbvolmachten\Partners\Models;
 
 use Model;
 
