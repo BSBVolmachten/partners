@@ -7,7 +7,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
         return [
-            'Bsbvolmachten\Partners\Components\Partners',
+            'Bsbvolmachten\Partners\Components\Partners' => 'partner',
         ];
     }
 
