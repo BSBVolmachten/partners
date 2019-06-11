@@ -10,3 +10,5 @@
     - bsbvolmachten_fix_sort_order.php
 1.0.5:
     - 'Added component'
+1.0.6:
+    - 'Bugfix for component link'
