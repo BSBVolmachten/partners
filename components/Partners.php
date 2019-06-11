@@ -2,9 +2,9 @@
 namespace Bsbvolmachten\Partners\components;
 
 use Cms\Classes\ComponentBase;
-use Bsbvolmachten\Partners\Models\Partners;
+use Bsbvolmachten\Partners\Models\Partners as Partner;
 
-class Partner extends ComponentBase {
+class Partners extends ComponentBase {
 
     public function componentDetails()
     {
@@ -16,6 +16,6 @@ class Partner extends ComponentBase {
 
     public function partners()
     {
-        return Partners::orderBy('sort_order', 'ASC')->get();
+        return Partner::orderBy('sort_order', 'ASC')->get();
     }
 }

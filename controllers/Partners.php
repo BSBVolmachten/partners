@@ -1,21 +1,23 @@
-<?php
-namespace Bsbvolmachten\Partners\components;
+<?php namespace Bsbvolmachten\Partners\Controllers;
 
-use Cms\Classes\ComponentBase;
-use Bsbvolmachten\Partners\Models\Partners as Partner;
+use Backend\Classes\Controller;
+use BackendMenu;
 
-class Partners extends ComponentBase {
+class Partners extends Controller
+{
+    public $implement = [        'Backend\Behaviors\ListController',        'Backend\Behaviors\FormController',        'Backend\Behaviors\ReorderController'    ];
 
-    public function componentDetails()
+    public $listConfig = 'config_list.yaml';
+    public $formConfig = 'config_form.yaml';
+    public $reorderConfig = 'config_reorder.yaml';
+
+    public $requiredPermissions = [
+        'manage=partners'
+    ];
+
+    public function __construct()
     {
-        return [
-            'name' => 'Partners',
-            'description' => 'Geeft partners weer op de pagina.'
-        ];
-    }
-
-    public function partners()
-    {
-        return Partner::orderBy('sort_order', 'ASC')->get();
+        parent::__construct();
+        BackendMenu::setContext('BsbVolmachten.Partners', 'main-menu-item');
     }
 }
