@@ -12,6 +12,6 @@ navigation:
     main-menu-item:
         label: Partners
         url: bsbvolmachten/partners/partners
-        icon: icon-male
+        icon: oc-icon-male
         permissions:
             - manage=partners

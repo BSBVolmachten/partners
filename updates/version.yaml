@@ -8,3 +8,5 @@
 1.0.4:
     - 'Fix Sort Order'
     - bsbvolmachten_fix_sort_order.php
+1.0.5:
+    - 'Added component'
