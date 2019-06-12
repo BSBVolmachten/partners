@@ -16,6 +16,12 @@ class Partners extends ComponentBase {
 
     public function partners()
     {
-        return Partner::orderBy('sort_order', 'ASC')->get();
+        $partners = Partner::orderBy('sort_order', 'ASC')->get();
+
+        if($partners->isEmpty()) {
+            return false;
+        } else {
+            return $partners;
+        }
     }
 }
