@@ -1,0 +1,18 @@
+{% if partners %}
+<div class="partner partner-layout style-1">
+    <div class="container">
+        <div class="heading">
+            <h3 class="heading-section">Onze Partners</h3>
+        </div>
+        <div class="partner-list owl-carousel" data-items="5" data-col-sm="1" data-col-md="2" data-col-lg="4" data-center="0">
+            {% for partner in partners %}
+            <div class="partner-item">
+                <a target="_blank" href="{{ partner.url|replace({'http://': 'https://'}) }}">
+                    <img src="{{ partner.image.thumb(203,105) }}" alt="{{ partner.name }}" />
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endif %}
