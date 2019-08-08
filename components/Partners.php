@@ -14,14 +14,17 @@ class Partners extends ComponentBase {
         ];
     }
 
-    public function partners()
-    {
-        $partners = Partner::orderBy('sort_order', 'ASC')->get();
-
-        if($partners->isEmpty()) {
-            return false;
+    public function onRun() {
+        $partners = $this->Getpartners();
+        if ($partners->isNotEmpty()) {
+           $this->page['partners'] = $partners;
         } else {
-            return $partners;
+            $this->page['partners'] = false;
         }
+    }
+
+    public function Getpartners()
+    {
+        return Partner::orderBy('sort_order', 'ASC')->get();
     }
 }
